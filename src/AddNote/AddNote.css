@@ -1,0 +1,37 @@
+form{
+    margin-top: 15%;
+    text-align: center;
+    box-sizing: content-box;
+    position: sticky;
+    bottom: 0px;
+    width: 100%;
+}
+form input{
+    background-color: #3b3b3b;
+    width: 70%;
+    height:6vh;
+    padding: 0;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+form button{
+    color: white;
+    background-color: #3b3b3b;
+    font-size: 200%;
+    width: 5vh;
+    height: 6vh;
+    border: none;
+    display: inline-block;
+    position: absolute;
+    margin-left: -37px;
+    border-radius: 0 8px 8px 0;
+}
+
+input:focus{
+
+    color: #ffffff;
+}
