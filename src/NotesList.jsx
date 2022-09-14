@@ -6,7 +6,6 @@ function NotesList(props){
 
     const deleteNote = (id) => {
         props.deleteNote(id);
-        console.log(id);
     }
 
 
@@ -18,7 +17,6 @@ function NotesList(props){
 
     return(
         <div>
-            <h1>Notes List</h1>
             {props.notes.map((note) => {
                 return <Note deleteNote={deleteNote} note={note} key={note.id}/>
             })}

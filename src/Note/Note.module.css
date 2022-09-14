@@ -1,0 +1,28 @@
+.card{
+    background-color: #1e1e26;
+    color: white;
+    width: 90% !important;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.title{
+    color: #ee69ac;
+    margin-left: 15px;
+    margin-top:8px !important;
+    padding-top: 4px;
+
+}
+
+.content{
+    color: white;
+    margin-left: 15px;
+    margin-top: -10px;
+    padding-bottom: 4px;
+}
+
+.button{
+    background-color: transparent;
+    border: none;
+    margin-top: 30px;
+}

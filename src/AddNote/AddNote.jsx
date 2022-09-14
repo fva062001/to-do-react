@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './AddNote.css';
+import styles from './AddNote.module.css';
 
 function AddNote(props){
 
@@ -28,7 +28,7 @@ function AddNote(props){
     }
 
     return(
-            <form onSubmit={submitNote}>
+            <form onSubmit={submitNote} className={styles.form}>
                     <input type="text" placeholder='Add something' value={content} onChange={handleChange}/>
                     <button type="submit">+</button>
             </form>

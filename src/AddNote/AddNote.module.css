@@ -1,4 +1,4 @@
-form{
+.form{
     margin-top: 15%;
     text-align: center;
     box-sizing: content-box;
@@ -6,7 +6,7 @@ form{
     bottom: 0px;
     width: 100%;
 }
-form input{
+.form input{
     background-color: #3b3b3b;
     width: 70%;
     height:6vh;
@@ -18,7 +18,7 @@ form input{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-form button{
+.form button{
     color: white;
     background-color: #3b3b3b;
     font-size: 200%;
@@ -31,7 +31,7 @@ form button{
     border-radius: 0 8px 8px 0;
 }
 
-input:focus{
+.input:focus{
 
     color: #ffffff;
 }
