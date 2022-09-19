@@ -35,7 +35,7 @@
     background: #16161c;
     border-radius: 10px;
     width: 90%;
-    height: 40%;
+    height: 37vh;
     position: fixed;
     top: 30vh;
     left: 5%;
@@ -47,7 +47,6 @@
     color: white;
     display: block;
     margin-top: 10px;
-    
 }
 .backdrop {
     position: fixed;
