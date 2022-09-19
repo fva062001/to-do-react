@@ -1,6 +1,7 @@
 import React from "react";
-import Note from "./Note/Note";
+import Note from './Components/Note/Note';
 import './NotesList.css';
+import EmptyList from "./Components/EmptyList/EmptyList";
 
 function NotesList(props){
 
@@ -11,7 +12,7 @@ function NotesList(props){
 
     if(props.notes.length <= 0){
         return(
-                <h1>No notes, try adding one</h1>
+            <EmptyList />
         );
     }
 

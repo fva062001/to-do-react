@@ -1,27 +1,12 @@
 import classes from './App.module.css';
-import AddNote from './AddNote/AddNote';
+import AddNote from './Components/AddNote/AddNote';
 import React, {useState} from 'react';
 import NotesList from './NotesList';
-import User from './Login/Login';
 import Button from 'react-bootstrap/Button';
-
+import User from './Components/Login/Login';
   //Initial Array of objects to test (displayed in the container component)
   const initialArray = [
-    {
-      id: 1,
-      title: 'First Note',
-      content: 'This is the first note'
-    },
-    {
-      id: 2,
-      title: 'Second Note',
-      content: 'This is the second note'
-    },
-    {
-      id: 3,
-      title: 'Third Note',
-      content: 'This is the third note'
-    }
+
   ];
 function App() {
 
@@ -49,7 +34,7 @@ function App() {
       <User username={username}/>
       <NotesList deleteNote={deleteNote} notes={notes}/>
       {formAppear && <AddNote addNote={addNote}/>}
-      <Button className={classes.button} onClick={showForm}>+</Button>
+      <Button size='lg' className={classes.button} onClick={showForm}>+</Button>
     </div>
     
   );

@@ -1,0 +1,11 @@
+.card{
+    border: 2px #4a4a61 dashed;
+    color: #4a4a61;
+    width: 85%;
+    margin: 6% auto;
+}
+
+.card p{
+    text-align: center;
+    padding: 5%;
+}
