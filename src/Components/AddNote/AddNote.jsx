@@ -34,7 +34,7 @@ function AddNote(props){
 
     return(
         <div>
-            <div className={styles.backdrop} onClick={props.onConfirm}/>
+            <div className={styles.backdrop} onClick={props.hideForm}/>
             <div className={styles.card}>
                 <form onSubmit={submitNote}>
                     <label htmlFor="title">Note Title</label>

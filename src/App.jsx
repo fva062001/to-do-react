@@ -29,11 +29,15 @@ function App() {
     setFormAppear(true);
   }
 
+  const hideForm = () => {
+    setFormAppear(false);
+  }
+
   return (
     <div className={classes.mainContainer}>
       <User username={username}/>
       <NotesList deleteNote={deleteNote} notes={notes}/>
-      {formAppear && <AddNote addNote={addNote}/>}
+      {formAppear && <AddNote hideForm={hideForm} addNote={addNote}/>}
       <Button size='lg' className={classes.button} onClick={showForm}>+</Button>
     </div>
     
