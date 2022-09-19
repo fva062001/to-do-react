@@ -1,4 +1,4 @@
-.form{
+.card form{
     margin-top: 15%;
     text-align: center;
     box-sizing: content-box;
@@ -6,8 +6,8 @@
     bottom: 0px;
     width: 100%;
 }
-.form input{
-    background-color: #3b3b3b;
+.card input{
+    background-color: #3c3c4c;
     width: 70%;
     height:6vh;
     padding: 0;
@@ -15,23 +15,46 @@
     border: none;
     text-align: center;
     display: inline-block;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: #9f9fa7;
 }
 
-.form button{
-    color: white;
-    background-color: #3b3b3b;
-    font-size: 200%;
-    width: 5vh;
-    height: 6vh;
-    border: none;
-    display: inline-block;
-    position: absolute;
-    margin-left: -37px;
-    border-radius: 0 8px 8px 0;
+.card button{
+    display: block;
+    margin: 6% auto;
+    border-radius: 8px;
+    font-size: large;
+
 }
 
-.input:focus{
+.card input:focus{
 
     color: #ffffff;
+}
+
+.card{
+    background: #16161c;
+    border-radius: 10px;
+    width: 90%;
+    height: 35%;
+    position: fixed;
+    top: 30vh;
+    left: 5%;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.card label{
+    color: white;
+    display: block;
+    margin-top: 10px;
+    
+}
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
 }

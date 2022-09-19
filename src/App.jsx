@@ -1,9 +1,9 @@
-import './App.css';
+import classes from './App.module.css';
 import AddNote from './AddNote/AddNote';
 import React, {useState} from 'react';
 import NotesList from './NotesList';
 import User from './Login/Login';
-
+import Button from 'react-bootstrap/Button';
 
   //Initial Array of objects to test (displayed in the container component)
   const initialArray = [
@@ -28,6 +28,7 @@ function App() {
   const username = "User";
   //State for the array of objects
   const [notes, setNotes] = useState(initialArray);
+  const [formAppear, setFormAppear] = useState(false);
   const deleteNote = (id) => {
     setNotes(notes.filter((note) => note.id !== id));
   }
@@ -36,14 +37,21 @@ function App() {
     setNotes((prevNotes) => {
       return [...prevNotes, note];
     });
+    setFormAppear(false);
+  }
+
+  const showForm = () => {
+    setFormAppear(true);
   }
 
   return (
-    <div className='main-container'>
+    <div className={classes.mainContainer}>
       <User username={username}/>
       <NotesList deleteNote={deleteNote} notes={notes}/>
-      <AddNote addNote={addNote}/>
+      {formAppear && <AddNote addNote={addNote}/>}
+      <Button className={classes.button} onClick={showForm}>+</Button>
     </div>
+    
   );
 }
 
