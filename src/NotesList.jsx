@@ -17,11 +17,11 @@ function NotesList(props){
     }
 
     return(
-        <div>
+        <>
             {props.notes.map((note) => {
                 return <Note deleteNote={deleteNote} note={note} key={note.id}/>
             })}
-        </div>
+        </>
     );
 }
 

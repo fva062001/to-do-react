@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import NotesList from './NotesList';
 import Button from 'react-bootstrap/Button';
 import User from './Components/Login/Login';
+import { useEffect } from 'react';
   //Initial Array of objects to test (displayed in the container component)
   const initialArray = [
 
@@ -15,11 +16,23 @@ function App() {
   const [notes, setNotes] = useState(initialArray);
   const [formAppear, setFormAppear] = useState(false);
   const deleteNote = (id) => {
+    localStorage.setItem('note',JSON.stringify(notes.filter((note) => note.id !== id)))
     setNotes(notes.filter((note) => note.id !== id));
   }
 
+  useEffect(()=>{
+    if( JSON.parse(localStorage.getItem('note')) > 0)
+    {
+      setNotes(JSON.parse(localStorage.getItem('note')))
+    }
+    else{
+      localStorage.removeItem('note');
+    }
+  },[notes])
+
   const addNote = (note) => {
     setNotes((prevNotes) => {
+      localStorage.setItem('note',JSON.stringify([...prevNotes,note]))
       return [...prevNotes, note];
     });
     setFormAppear(false);

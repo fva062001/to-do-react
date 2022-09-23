@@ -48,13 +48,6 @@ function Modal(props){
 
 
 function AddNote(props){
-
-
-
-
-
-
-
     return(
         <>
             {ReactDOM.createPortal(<Backdrop hideForm={props.hideForm}/>, document.getElementById('backdrop-root'))}
