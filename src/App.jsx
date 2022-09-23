@@ -21,13 +21,7 @@ function App() {
   }
 
   useEffect(()=>{
-    if( JSON.parse(localStorage.getItem('note')) > 0)
-    {
       setNotes(JSON.parse(localStorage.getItem('note')))
-    }
-    else{
-      localStorage.removeItem('note');
-    }
   },[notes])
 
   const addNote = (note) => {
