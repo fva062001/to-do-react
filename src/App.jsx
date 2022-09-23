@@ -21,6 +21,7 @@ function App() {
   }
 
   useEffect(()=>{
+    if(JSON.parse(localStorage.getItem('note')) !== null)
       setNotes(JSON.parse(localStorage.getItem('note')))
   },[])
 
